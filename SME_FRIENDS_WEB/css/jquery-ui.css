@@ -1,0 +1,524 @@
+﻿@charset "utf-8";
+/* CSS Document written by xn 2014-02/03 */
+.ui-dialog {
+    box-shadow: 0 1px 1px #333333;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
+    position: fixed;
+}
+.ui-widget {
+    font-family: Verdana,Arial,sans-serif;
+    font-size: 1.1em;
+    z-index: 999;
+}
+.ui-corner-all {
+
+}
+
+.super-dialog{
+    z-index:1999;
+}
+
+.ui-widget-content {
+    background: #f5f5f5;
+}
+.ui-dialog-titlebar {
+    cursor: move;
+    /*padding: 0.4em 1em;*/
+    position: relative;
+    border-radius: 0;
+}
+.ui-dialog .ui-dialog-titlebar .ui-state-default {
+    background: none;
+    border: none;
+}
+.ui-widget-header {
+    background: #f5f5f5;
+    color: #282828;
+    font-size: 16px;
+    font-weight: bold;
+    /*height: 30px;*/
+    padding: 15px;
+    text-align: left;
+    position: relative;
+}
+#ui-datepicker-div .ui-widget-header {
+    background: #EBEBEB;
+    border-bottom: 1px solid #D2D2D2;
+    padding: 5px;
+    position: relative;
+}
+#ui-datepicker-div .ui-widget-header a {
+    font: bold 12px "微软雅黑", verdana, sans-serif;
+}
+.ui-icon-circle-triangle-w {
+    /*background: url("../images/left.png") no-repeat;*/
+    cursor: pointer;
+    float: left;
+    margin-top: 6px;
+}
+.ui-icon-circle-triangle-e {
+    /*background: url("../images/right.png") no-repeat;*/
+    float: right;
+    cursor: pointer;
+    margin-top: 6px;
+}
+.ui-datepicker .ui-datepicker-title {
+    line-height: 2em;
+    margin: 0 1em;
+    text-align: center;
+}
+.ui-datepicker-month {
+    width: 70px;
+}
+.ui-datepicker-year {
+    width: 70px;
+}
+.ui-icon {
+    background-repeat: no-repeat;
+    color: #F1F1F1;
+    display: block;
+    overflow: hidden;
+    text-indent: -15px;
+}
+#ui-datepicker-div {
+    background: #eeeeee;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 238px;
+    /*padding: 5px;*/
+}
+#ui-datepicker-div .ui-datepicker-calendar {
+    width: 100%;
+    padding: 5px;
+}
+#ui-datepicker-div .ui-datepicker-calendar th {
+    font-size: 14px;
+    font-family: "微软雅黑";
+    color: #666;
+    line-height: 30px;
+}
+#ui-datepicker-div .ui-datepicker-calendar td a.ui-state-default {
+    display: block;
+    background: #fafafa;
+    border: 1px solid #D3D3D3;
+    color: #282828;
+    font-weight: normal;
+}
+#ui-datepicker-div .ui-datepicker-calendar td a.ui-state-default:hover {
+    background: #eeeeee;
+    color: #191919;
+}
+#ui-datepicker-div .ui-datepicker-calendar td a.ui-state-highlight {
+    border: 1px solid #ABD3E0;
+    background: #DBEDFF;
+    color: #005688;
+}
+#ui-datepicker-div .ui-datepicker-calendar td a.ui-state-highlight:hover {
+    border: 1px solid #ABD3E0;
+    background: #eeeeee;
+    color: #005688;
+}
+.ui-datepicker td span, .ui-datepicker td a {
+    display: block;
+    padding: 0.1em;
+    text-align: right;
+    text-decoration: none;
+}
+.ui-helper-clearfix:after {
+    clear: both;
+}
+.ui-helper-clearfix:before, .ui-helper-clearfix:after {
+    content: "";
+    display: table;
+}
+.ui-helper-clearfix:before, .ui-helper-clearfix:after {
+    content: "";
+    display: table;
+}
+.ui-dialog .ui-dialog-title {
+    float: left;
+    margin: 0.1em 16px;
+}
+.ui-dialog-title {
+    color: #d12428;
+    font: normal 18px "微软雅黑";
+    padding-top: 2px;
+}
+.ui-widget-overlay {
+    /*background: repeat scroll #111;*/
+    /*opacity: 0.7;*/
+    background-color: rgba(17,17,17,0.7);
+    left: 0;
+    position: fixed;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    clear: both;
+    z-index: 99;
+}
+.ui-widget-overlay2 {
+    position: fixed;
+    top: 120px;
+}
+.ui-dialog .ui-dialog-content {
+    background: #f5f5f5;
+    border: 0 none;
+    /*overflow-y: auto;*/
+    margin: 0 30px;
+    position: relative;
+    text-align: left;
+}
+.ui-dialog-buttonset {
+    text-align: center;
+}
+.ui-dialog-buttonset button,
+.ui-dialog-buttonset button:focus {
+    background-color: #eee;
+    border: 1px solid #aaa;
+    border-radius: 0;
+    color: #666;
+    cursor: pointer;
+    display: inline-block;
+    font-family: "微软雅黑";
+    font-size: 14px;
+    height: 30px;
+    line-height: 20px;
+    text-align: center;
+    width: 100px;
+    margin: 10px 10px 15px;
+}
+.ui-dialog-buttonset button:hover {
+    background: #282828;
+    border-color: #282828;
+    color: #fff;
+}
+.ui-dialog-buttonset button:hover span {
+    color: #fff;
+}
+
+.ui-dialog .ui-dialog-titlebar-close {
+    height: 18px;
+    margin: -5px 0 0;
+    padding: 1px;
+    position: absolute;
+    right: 1.5em;
+    top: 50%;
+    width: 19px;
+    opacity: 0.5;
+}
+.ui-dialog .ui-dialog-titlebar-close:hover {
+    opacity: 1;
+}
+.ui-dialog-titlebar-close .ui-icon {
+    background: url("../images/close.png") no-repeat scroll 0 0 transparent;
+    display: inline-block;
+    height: 16px;
+    width: 16px;
+}
+.ui-dialog .ui-dialog-titlebar-close span {
+    display: block;
+    margin: 1px;
+}
+.ui-dialog-titlebar-close .ui-icon {
+    background-repeat: no-repeat;
+    overflow: hidden;
+    text-indent: -99999px;
+}
+.ui-selectable-helper {
+    position: absolute;
+    z-index: 100;
+    border: 1px dotted black;
+}
+.ui-button-icon-only .ui-button-text, .ui-button-icons-only .ui-button-text {
+    padding: 0.4em;
+    text-indent: -1e+7px;
+}
+.ui-button .ui-button-text {
+    display: block;
+    line-height: normal;
+}
+
+.ui-datepicker-trigger {
+    position: relative;
+    right: 3px;
+    top: 3px;
+}
+
+
+/* accrodion */
+.ui-state-active {
+    background-color: #0a8cd2;
+}
+
+/*slider*/
+.ui-slider {
+    position: relative;
+    text-align: left;
+}
+.ui-slider .ui-slider-handle {
+    cursor: default;
+    height: 1.2em;
+    position: absolute;
+    width: 1.2em;
+    z-index: 2;
+}
+.ui-slider .ui-slider-range {
+    background-position: 0 0;
+    border: 0 none;
+    display: block;
+    font-size: 0.7em;
+    position: absolute;
+    z-index: 1;
+}
+.ui-slider.ui-state-disabled .ui-slider-handle, .ui-slider.ui-state-disabled .ui-slider-range {
+    filter: inherit;
+}
+.ui-slider-horizontal {
+    height: 0.7em;
+}
+.ui-slider-horizontal .ui-slider-handle {
+    margin-left: -0.6em;
+    top: -0.3em;
+}
+.ui-slider-horizontal .ui-slider-range {
+    height: 100%;
+    top: 0;
+}
+.ui-slider-horizontal .ui-slider-range-min {
+    left: 0;
+    padding: 0;
+    background-color: #3ab4e7;
+}
+.ui-slider-horizontal .ui-slider-range-max {
+    right: 0;
+    padding: 0;
+}
+.ui-slider-vertical {
+    height: 100px;
+    width: 0.8em;
+}
+.ui-slider-vertical .ui-slider-handle {
+    left: -0.3em;
+    margin-bottom: -0.6em;
+    margin-left: 0;
+}
+.ui-slider-vertical .ui-slider-range {
+    left: 0;
+    width: 100%;
+}
+.ui-slider-vertical .ui-slider-range-min {
+    bottom: 0;
+}
+.ui-slider-vertical .ui-slider-range-max {
+    top: 0;
+}
+
+.ui-slider-horizontal{
+    background: #eee;
+    border: 1px solid transparent;
+    color: #222222;
+    z-index: 900;
+}
+.ui-slider .ui-slider-handle {
+    cursor: default;
+    height: 1em;
+    position: absolute;
+    width: 1em;
+    z-index: 2;
+}
+.ui-slider-horizontal .ui-slider-handle {
+    margin-left: -0.6em;
+    top: -0.3em;
+}
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+    background: #eee;
+    border: 1px solid #d3d3d3;
+    color: #999;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+
+/*----------------- timepicker ---------------*/
+.ui-timepicker-div .ui-widget-header {
+    margin-bottom: 8px;
+}
+.ui-timepicker-div dl {
+    text-align: left;
+    padding: 15px 10px 5px;
+    font-size: 12px;
+    font-family:  "微软雅黑";
+    color: #666;
+}
+.ui-timepicker-div dl dt {
+    height: 25px;
+    margin-bottom: -25px;
+}
+.ui-timepicker-div dl dd {
+    margin: 0 10px 10px 50px;
+}
+.ui-timepicker-div td {
+    font-size: 90%;
+}
+.ui-tpicker-grid-label {
+    background: none;
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+.ui-timepicker-rtl {
+    direction: rtl;
+}
+.ui-timepicker-rtl dl {
+    text-align: right;
+}
+.ui-timepicker-rtl dl dd {
+    margin: 0 65px 10px 10px;
+}
+.ui_tpicker_hour .ui_tpicker_hour_slider,
+.ui_tpicker_minute .ui_tpicker_minute_slider,
+.ui_tpicker_second .ui_tpicker_second_slider {
+    background-color: #fff;
+}
+.ui_tpicker_hour .ui-slider-handle,
+.ui_tpicker_minute .ui-slider-handle,
+.ui_tpicker_second .ui-slider-handle {
+    height: 10px;
+    width: 9px;
+    border-radius: 0;
+    margin-top: 3px;
+    margin-left: -2px;
+    background-color: #dbedff;
+    border-color: #abd3e0;
+}
+.ui-datepicker-buttonpane {
+    background-color: #eee;
+    min-width: 170px;
+}
+.ui-datepicker-buttonpane .ui-datepicker-current,
+.ui-datepicker-buttonpane .ui-datepicker-close {
+    border-radius: 0;
+    padding: 2px 5px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    background-color: #fafafa;
+    font-size: 12px;
+    font-family:  "微软雅黑";
+}
+.ui-datepicker-buttonpane .ui-datepicker-current:hover,
+.ui-datepicker-buttonpane .ui-datepicker-close:hover {
+    color: #333;
+}
+
+
+/*------------------- selectmenu ------------------------*/
+.ui-menu {
+    display: block;
+    list-style: outside none none;
+    margin: 0;
+    outline: medium none;
+    padding: 0;
+    z-index: 999999;
+}
+.ui-selectmenu-menu {
+    display: none;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 0;
+}
+.ui-selectmenu-open {
+    display: block;
+}
+.ui-selectmenu-menu .ui-menu {
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding-bottom: 1px;
+}
+.ui-menu .ui-menu-item {
+    cursor: pointer;
+    margin: 0;
+    min-height: 0;
+    padding: 3px 1em 3px 0.4em;
+    position: relative;
+}
+.ui-selectmenu-button {
+    cursor: pointer;
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+    text-decoration: none;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    border-radius: 0;
+    z-index: 99;
+}
+.ui-selectmenu-button span.ui-icon {
+    left: auto;
+    margin-top: -8px;
+    position: absolute;
+    right: 0;
+    top: 65%;
+}
+.ui-state-hover,
+.ui-widget-content .ui-state-hover,
+.ui-widget-header .ui-state-hover,
+.ui-state-focus,
+.ui-widget-content .ui-state-focus,
+.ui-widget-header .ui-state-focus {
+    background: #dadada;
+    color: #282828;
+    font-weight: normal;
+    outline: none;
+}
+.ui-menu .ui-state-focus,
+.ui-menu .ui-state-active {
+    margin: -1px;
+    outline: none;
+}
+.ui-menu .ui-menu-item {
+    cursor: pointer;
+    margin: 0;
+    min-height: 0;
+    padding: 3px 1em 3px 0.4em;
+    position: relative;
+    line-height: 1.5em;
+    border: 1px solid #ccc;
+    border-top: none;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.ui-selectmenu-button span.ui-selectmenu-text {
+    display: block;
+    text-align: center;
+    background-color: #fff;
+    border: none;
+    color: #282828;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+.no-close .ui-dialog-titlebar-close {
+  display: none;
+}
+
+.ui-sortable li.ui-state-highlight {
+    border: 1px solid #fcefa1;
+    background-color: #fcfaf2;
+    padding: 10px 0;
+}
+
+
+.ui-autocomplete {
+    max-height: 112px;
+    overflow-y: auto;
+    /* prevent horizontal scrollbar */
+    overflow-x: hidden;
+}
+/* IE 6 doesn't support max-height
+* we use height instead, but this forces the menu to always be this tall
+*/
+* html .ui-autocomplete {
+    height: 112px;
+}

@@ -1,0 +1,196 @@
+﻿<div class="contacts-main circle-manage-main">
+    <!-- 标题区 -->
+    <section class="contacts-topline clear-fix">
+        <div class="back-home">
+            <a id="aGoBack" href="javascript:void(0);">
+                <span class="icon-optSet icon-img icon-back"></span>
+            </a>
+        </div>
+        <div id="divAddCommunity" class="top-options" style="display:none;">
+            <span class="icon-optSet icon-img icon-plus" title="添加圈子" id="addCommunity"></span>
+        </div>
+        <div class="topline-name">圈子</div>
+    </section>
+    <!-- 选项卡 -->
+    <section class="circle-tabs clear-fix">
+        <ul>
+            <li id="liMyCommunity" class="circle-topic">我所在圈子</li>
+            <li id="liRecommendCommunity" class="circle-discuss">热门圈子</li>
+        </ul>
+    </section>
+
+    <!-- 搜索 -->
+    <section class="contacts-search">
+        <input id="txtKeyword" type="text" class="search" placeholder="查找圈子...">
+        <span id="spnSearch" class="icon-optSet icon-img icon-search-small"></span>
+    </section>
+
+    <!-- 内容列表 -->
+    <section class="circle-list">
+        <div id="divEmptyCommunity" class="friend-list-empty"><span>您暂不属于任何行业圈子哦~</span></div>
+        <ul id="ulCommunityList"></ul>
+        <div class="pagination" style="text-align: center; margin-bottom: 15px;">
+            <div id="wPaginate8nPosition"></div>
+        </div>
+    </section>
+</div>
+
+
+<!-- 添加圈子 -->
+<section id="sctAddCommunity" class="dialog-circle">
+    <table class="editor-limit">
+        <tr>
+            <td width="80">
+                <span>名称</span>
+            </td>
+            <td>
+                <input id="txtCommunityName" type="text" placeholder="圈子名称">
+            </td>
+            <td rowspan="2" width="120">
+                <div class="setting-avatar">
+                    <img id="imgCommunityPhoto" alt="" src="../images/user-default.png">
+                    <form method="post" action="" enctype="multipart/form-data" id="fmCommuntiyPhoto">
+                        <a class="files" href="javascript:void(0);">
+                            <input type="file" accept=".png,.jpg" name="fileCommunityPhoto" id="fileCommunityPhoto">
+                        </a>
+                        </form>
+                 </div>
+                <input id="btnUploadCommunityImage" type="button" class="BtnUpload_photo" value="点击头像编辑">
+            </td>
+        </tr>
+        <tr>
+            <td width="80">
+                <span>简介</span>
+            </td>
+            <td>
+                <textarea id="txtCommunityRemark" name="intro"></textarea>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <span>邀请成员</span>
+            </td>
+            <td class="atlist" colspan="2">
+                <select id="sltMyFriendsList" class="" name="sltMyFriendsList" multiple></select>
+                <div class="arrow">
+                    <div id="spnLeftMove" class="list-arrow">&gt;&gt;</div>
+                    <div id="spnRightMove" class="list-arrow">&lt;&lt;</div>
+                </div>
+                <select id="sltCommunityMemberList" class="" name="sltCommunityMemberList" multiple></select>
+            </td>
+        </tr>
+    </table>
+</section>
+
+
+<!-- 管理圈 -->
+<section id="sctManageCommunity" class="dialog-manage-circle">
+    <table class="editor-limit">
+        <tr>
+            <td width="80">
+                <span>名称</span>
+            </td>
+            <td>
+                <input id="txtManageCommunityName" type="text" placeholder="圈子名称">
+            </td>
+           
+            <td rowspan="2" width="120">
+                <div class="setting-avatar">
+                    <img id="imgManageCommunityPhoto" alt="" src="../images/user-default.png">
+                    <form method="post" action="" enctype="multipart/form-data" id="fmManageCommuntiyPhoto">
+                        <a class="files" href="javascript:void(0);">
+                            <input type="file" accept=".png,.jpg" name="fileCommunityPhoto" id="fileManageCommunityPhoto">
+                        </a>
+                    </form>
+                </div>
+                <input id="btnUploadManageCommunityImage" type="button" class="BtnUpload_photo" value="点击头像编辑">
+            </td>
+        </tr>
+        <tr>
+            <td width="80">
+                <span>简介</span>
+            </td>
+            <td>
+                <textarea id="txtManageCommunityRemark" name="intro"></textarea>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <span>设置管理员</span>
+            </td>
+            <td class="atlist" colspan="2">
+                <select id="sltMyMemberList" class="" name="sltMyMemberList" multiple>
+                </select>
+                <div class="arrow">
+                    <div id="spnManageLeftMove" class="list-arrow">&gt;&gt;</div>
+                    <div id="spnManageRightMove" class="list-arrow">&lt;&lt;</div>
+                </div>
+                <select id="sltAdminMemberList" class="" name="sltAdminMemberList" multiple>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <label>
+                    <input id="ckCanSearch" type="checkbox" />&nbsp;&nbsp;是否可搜索
+                </label>
+            </td>
+        </tr>
+    </table>
+</section>
+
+
+<!-- 邀请加入好友圈 -->
+<section id="sctJoinMemberCommunity" class="dialog-manage-friend">
+    <table class="editor-limit">
+        <tr>
+            <td width="80">
+                <span>我的好友</span>
+            </td>
+            <td class="atlist">
+                <select id="sltMyAddressBookList" class="" name="sltMyAddressBookList" multiple>
+                  
+                </select>
+                <div class="arrow">
+                    <div id="spnJoinLeftMove" class="list-arrow">&gt;&gt;</div>
+                    <div id="spnJoinRightMove" class="list-arrow">&lt;&lt;</div>
+                </div>
+                <select id="sltJoinMemberList" class="" name="sltJoinMemberList" multiple>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <span>备注信息</span>
+            </td>
+            <td>
+                <input id="txtJoinRemark" type="text">
+            </td>
+        </tr>
+    </table>
+</section>
+
+
+<!-- 移除好友 -->
+<section id="sctRemoveMemberCommunity" class="dialog-delete-friend">
+    <div>请选择要移除的好友</div>
+    <select id="sltRemoveMemberList" class="" name="sltRemoveMemberList" multiple>
+    </select>
+</section>
+
+
+<!-- 申请加入圈 -->
+<section id="sctApplyMemberCommunity" class="dialog-apply-circle">
+    <div>
+        <span>行业圈</span>
+        <span id="spnApplyCommunityName" class="user-name"></span>
+    </div>
+    <div>
+        <span>创建人</span>
+        <span id="spnApplyCreaterName" class="user-name"></span>
+    </div>
+    <div>
+        <span>备　注</span>
+        <input id="txtApplyRemark" type="text" class="search">
+    </div>
+</section>

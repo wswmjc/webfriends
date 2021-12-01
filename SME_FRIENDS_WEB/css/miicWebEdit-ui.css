@@ -1,0 +1,556 @@
+﻿/*editor short*/
+.weibo-editor-block {
+  position: relative;
+  padding-top: 10px;
+}
+.weibo-editor-block .mweibo-tags,
+.meditor-block .mweibo-tags {
+  margin-left: 10px;
+}
+.weibo-editor-block .mweibo-tags span,
+.meditor-block .mweibo-tags span {
+  margin-top: 0;
+  display: inline;
+}
+
+.weibo-editor-short {
+  border: 1px dashed #aaa;
+  background-color: #fff;
+  width: 100%;
+  min-height: 175px;
+  padding: 7px 7px 40px 7px;
+  color: #282828;
+  font-size: 14px;
+  font-family: "微软雅黑","宋体";
+  word-wrap:break-word;
+  word-break:break-all;
+  line-height:18px;
+  cursor: text;
+  text-align:left;
+}
+
+.weibo-editor-short .emotion{
+    line-height:18px;
+    vertical-align:-6px;
+}
+
+.weibo-editor-comment {
+  border: 1px dashed #aaa;
+  background-color: #fff;
+  width: 100%;
+  min-height: 100px;
+  padding: 7px 7px 40px 7px;
+  color: #282828;
+  font-size: 14px;
+  font-family: "微软雅黑","宋体";
+  word-wrap:break-word;
+  word-break:break-all;
+  line-height:18px;
+  cursor: text;
+  text-align:left;
+}
+
+.weibo-editor-comment .emotion{
+    line-height:18px;
+    vertical-align:-6px;
+}
+
+.weibo-editor-opts ul li {
+  float: left;
+  background: url("../images/editor-line.png") left top no-repeat;
+  width: 70px;
+  text-align: center;
+  height: 75px;
+  padding-top: 12px;
+  cursor:pointer;
+}
+.weibo-editor-opts ul li:last-child {
+  position: relative;
+  font-size: 12px;
+  color: #aaa;
+  width: 300px;
+}
+.weibo-editor-opts ul li:last-child span {
+  position: absolute;
+  bottom: 17px;
+  left: 15px;
+  cursor: pointer;
+}
+.weibo-editor-opts ul li .editor-opts-name {
+  line-height: 2;
+}
+.weibo-editor-opts ul li.selected .editor-opts-name,
+.weibo-editor-opts ul li:hover .editor-opts-name {
+  color: #ba2a2a;
+}
+
+#fmMomentsPhoto{
+    width:24px;
+    height:24px;
+    float:left;
+    margin-right:5px;
+}
+
+#txtMomentsPhoto {
+	cursor: pointer;
+	font-size: 0px;/**清除光标**/
+	left: 10px;
+	opacity: 0;
+	position: absolute;
+	width: 24px;
+	height: 24px;
+}
+
+#fmMomentsFile{
+    width:24px;
+    height:24px;
+    float:left;
+    margin-right:5px;
+}
+
+#txtMomentsFile {
+	cursor: pointer;
+	font-size: 0px;/**清除光标**/
+	left: 39px;
+	opacity: 0;
+	position: absolute;
+	width: 24px;
+	height: 24px;
+}
+
+.weibo-editor-bottom {
+  position: absolute;
+  bottom: 2px;
+  left: 1px;
+  background-color: #f5f5f5;
+  padding: 10px 0 10px 20px;
+  width: 844px;
+  z-index: 20;
+}
+.editor-add-tags {
+  float: left;
+}
+.editor-btn {
+  float: right;
+}
+.btn-public {
+  background-color: #ccc;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 7px 25px;
+  margin-left: 10px;
+  cursor:default;
+}
+.btn-public-focus {
+  background-color: #ff8140;
+  cursor:pointer;
+}
+.btn-public:hover {
+  color: #fff;
+}
+.btn-addTags {
+  color: #999;
+}
+.public_emotion {
+    background: rgba(0, 0, 0, 0) url("../images/
+    ") no-repeat scroll 2px 2px;
+    color: #aaa;
+    height: 20px;
+    /*padding-left: 20px;*/
+    width: 50px;
+    z-index: 99;
+    /*margin-left: -10px;
+    margin-right: 20px;*/
+}
+.public_emotion:hover {
+    background-position: 2px -28px;
+    color: #e7a41f;
+}
+
+/*  ================================================================================
+	编辑器
+	================================================================================*/
+.weibo-editor {
+  position: relative;
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  padding: 20px;
+  width: 888px;
+  margin-bottom: 30px;
+}
+.weibo-editor-opts {
+  float: left;
+}
+.weibo-editor-info {
+  float: right;
+  font-size: 16px;
+  line-height: 2;
+}
+.weibo-editor-info div {
+  display: inline-block;
+}
+
+/*切换*/
+.slide-checkbox {
+    position: relative;
+    background: #559de3 none repeat scroll 0 0;
+    border-radius: 30px;
+    height: 23px;
+    width: 40px;
+    vertical-align: -3px;
+}
+.slide-checkbox input[type="checkbox"] {
+    visibility: hidden;
+}
+.slide-checkbox input[type="checkbox"]:checked + label {
+    left: 20px;
+}
+.slide-checkbox label {
+    background: #fff none repeat scroll 0 0;
+    border-radius: 30px;
+    cursor: pointer;
+    display: block;
+    height: 17px;
+    left: 3px;
+    position: absolute;
+    top: 3px;
+    transition: all 0.4s ease 0s;
+    width: 17px;
+    z-index: 1;
+}
+.listen-flag {
+    color: #559de3;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.message_info {
+    color: #999;
+    position: absolute;
+    /*right: 100px;*/
+    bottom: 12px;
+    z-index: 30;
+}
+.charType {
+    font-family: "Georgia","Arial";
+    font-weight: bold;
+    font-size: 16px;
+    color: #666;
+}
+.warning .charType {
+    color: #559de3;
+}
+.exceeded .charType {
+    color: red;
+}
+
+
+.dialog-normal {
+  display: none;
+  padding: 20px;
+}
+
+/*dialog-设置封面背景*/
+.dialog-accountbg {
+  display: none;
+  padding: 20px;
+}
+.dialog-accountbg ul li {
+  float: left;
+  margin: 10px 0;
+}
+.dialog-accountbg ul li.selected .themes-cover {
+  border-color: #ff8140;
+}
+.themes-cover {
+  position: relative;
+  width: 160px;
+  height: 100px;
+  overflow: hidden;
+  text-align: center;
+  border: 5px solid #fff;
+  background-color: #e0e0e0;
+}
+.themes-cover img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  margin-left: -50%;
+}
+.dialog-accountbg ul li .themes-name {
+  font-size: 12px;
+  line-height: 1.5;
+  padding: 5px;
+}
+
+
+/*dialog-添加标签*/
+.dialog-addtags {
+  display: none;
+  padding: 20px;
+  text-align: left;
+}
+.addtags-list label {
+  display: inline-block;
+  margin-right: 12px;
+  line-height: 3;
+  font-size: 14px;
+}
+.addtags-list label input {
+  margin-right: 3px;
+  vertical-align: middle;
+}
+
+.addtags-tip {
+  /*display: none;*/
+  top: 22px;
+  right: 20px;
+  color: #cf4646;
+  width: 160px;
+  text-align: left;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/*编辑器添加图片显示*/
+.editor-pics-block {
+  margin: 10px 0;
+}
+.editor-pics {
+  float: left;
+  position: relative;
+  width: 85px;
+  height: 85px;
+  overflow: hidden;
+  border: 1px solid #e0e0e0;
+  margin-right: 10px;
+  cursor: pointer;
+}
+.editor-pics:last-child {
+  margin-right: 0;
+}
+.editor-pics img {
+  position: absolute;
+  top:0;
+  left: 0;
+  height: 100%;
+  width:100%;
+}
+
+/*删除编辑器图片显示项*/
+.img-del {
+  display: inline-block;
+  background-color: #111;
+  text-align: center;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  opacity: 0;
+  transition: opacity 0.35s ease 0s, transform 0.35s ease 0s;
+}
+.img-del:hover {
+  opacity: .8;
+  transform: scale(1);
+}
+.img-del .icon-img {
+  vertical-align: middle;
+}
+.img-del .opt-text {
+  color: #ba2a2a;
+  font-size: 12px;
+}
+
+/*.user-attachment {
+	position: relative;
+	background-color: #f5f5f5;
+	border-top: 1px solid #e0e0e0;
+	padding: 10px;
+}
+
+.user-attachment-del {
+  display: none;
+  position:absolute;
+  right: 20px;
+  top: 17px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.user-attachment span {
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.user-attachment a {
+    color: #666;
+}
+
+    .user-attachment a:hover {
+        color: #559de3;
+    }
+
+.editor-attachment-block .user-attachment:hover .user-attachment-del{
+  display: block;
+}
+.user-attachment-del .opt-text {
+  color: #ba2a2a;
+  margin-left: -3px;
+}*/
+
+/*长篇微博编辑器*/
+.um-editor {
+    display: none;
+}
+.um-editor .meditor-title {
+    position: relative;
+    top: auto;
+    left: auto;
+    border: none;
+    padding: 15px 0 5px;
+    z-index: 1000;
+    font-size: 24px;
+    font-weight: normal;
+    color: #282828;
+    width: 850px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.um-editor .meditor-abstract {
+    position: relative;
+    top: auto;
+    left: auto;
+    border: none;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 15px 0 5px;
+    margin-bottom: 10px;
+    z-index: 1000;
+    font-size: 12px;
+    font-weight: normal;
+    color: #aaa;
+    width: 845px;
+}
+.meditor-block {
+    position: relative;
+    width: 846px;
+    font-size:14px;
+    margin-bottom:50px;
+    line-height: 1.1;
+}
+.meditor-block .weibo-editor-bottom {
+    position: absolute;
+    bottom: -40px;
+    left: 0;
+    background-color: #f5f5f5;
+    padding: 10px 0 10px 20px;
+    width: 846px;
+    border: 1px dashed #aaa;
+    border-top: none;
+}
+.meditor-block label {
+    margin-right: 20px;
+    color: #aaa;
+}
+.meditor-block input {
+    vertical-align: -2px;
+    margin-right: 3px;
+}
+
+.btn-meditor {
+    color: #aaa;
+    margin-right: 10px;
+}
+
+.meditor-top {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    z-index: 2001;
+    font-size: 12px;
+}
+.btn-addCover {
+    display: inline-block;
+    border: 1px solid #ba2a2a;
+    padding: 5px;
+    color: #ba2a2a;
+}
+
+.btn-addCover input{
+	cursor: pointer;
+	font-size: 0px;
+	opacity: 0;
+	position: absolute;
+	width: 60px;
+	height: 25.2px;
+    top:0;
+    left:88px;
+}
+.btn-addCover:hover {
+    color: #fff;
+    background-color: #ba2a2a;
+}
+
+.weibo-editor-opts ul li:last-child.editor-cover {
+  position: relative;
+  width: 150px;
+  overflow: hidden;
+  cursor: pointer;
+}
+.editor-cover img {
+  position: absolute;
+  left: 0;
+  width:150px;
+  height: 50px;
+  margin-left:10px;
+}
+.editor-cover .img-del {
+  display: inline-block;
+  background-color: #111;
+  text-align: center;
+  width: 150px;
+  height: 50px;
+  line-height: 85px;
+  opacity: 0;
+  margin-left:10px;
+  transition: opacity 0.35s ease 0s, transform 0.35s ease 0s;
+}
+.editor-cover .img-del:hover {
+  opacity: .8;
+  transform: scale(1);
+}
+.editor-cover .img-del .icon-img {
+  vertical-align: middle;
+  margin-left: 20px;
+}
+.editor-cover .img-del .opt-text {
+    color: #ba2a2a;
+    font-size: 12px;
+    bottom: -18px;
+    left: 55px;
+    position: absolute;
+}
+
+
+/*  ================================================================================
+  QQ face
+  ================================================================================*/
+.qqFace {
+    background: #fff none repeat scroll 0 0;
+    border: 1px solid #dfe6f6;
+    margin-top: 4px;
+    padding: 2px;
+}
+.qqFace table td {
+    padding: 0;
+}
+.qqFace table td img {
+    border: 1px solid #fff;
+    cursor: pointer;
+}
+.qqFace table td img:hover {
+    border: 1px solid #0066cc;
+}
+
+

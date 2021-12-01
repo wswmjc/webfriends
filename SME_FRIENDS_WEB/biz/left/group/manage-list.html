@@ -1,0 +1,121 @@
+﻿<div class="contacts-main">
+    <!-- 标题区 -->
+    <section class="contacts-topline clear-fix">
+        <div class="back-home">
+            <a id="aGoBack" href="javascript:void(0);">
+                <span class="icon-optSet icon-img icon-back"></span>
+            </a>
+        </div>
+        <div class="top-options">
+            <span class="icon-optSet icon-img icon-plus" title="添加讨论组" id="addGroup"></span>
+        </div>
+        <div class="topline-name">所在讨论组</div>
+    </section>
+
+    <!-- 搜索 -->
+    <section class="contacts-search">
+        <input id="txtKeyword" type="text" class="search" placeholder="查找讨论组...">
+        <span id="spnSearch" class="icon-optSet icon-img icon-search-small"></span>
+    </section>
+
+    <!-- 内容列表 -->
+    <section class="contacts-list">
+        <div id="divEmptyGroup" class="friend-list-empty"><span>您暂不属于任何讨论组哦~</span></div>
+        <ul id="ulGroupList"></ul>
+        <div class="pagination" style="text-align: center; margin-bottom: 15px;">
+            <div id="divGroupPage"></div>
+        </div>
+    </section>
+</div>
+
+
+
+<!-- 添加组 -->
+<section id="sctAddGroup" class="dialog-discuss">
+    <table class="editor-limit">
+        <tr>
+            <td width="80">
+                <span>名称</span>
+            </td>
+            <td>
+                <input id="txtGroupName" type="text" placeholder="讨论组名称">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <span>邀请成员</span>
+            </td>
+            <td class="atlist">
+                <select id="sltMyFriendsList" class="" name="sltMyFriendsList" multiple></select>
+                <div class="arrow">
+                    <div id="spnLeftMove" class="list-arrow">&gt;&gt;</div>
+                    <div id="spnRightMove" class="list-arrow">&lt;&lt;</div>
+                </div>
+                <select id="sltGroupMemberList" class="" name="sltGroupMemberList" multiple></select>
+            </td>
+        </tr>
+    </table>
+</section>
+<!-- 添加备注 -->
+<section id="sctGroupRemark" class="dialog-memo">
+    <div>
+        <span>讨论组</span>
+        <span id="spnGroupName" class="user-name"></span>
+    </div>
+    <div>
+        <span>备　注</span>
+        <input id="txtGroupRemark" type="text" class="search">
+    </div>
+</section>
+
+<!-- 邀请好友 -->
+<section id="sctInviteAddresser" class="dialog-contacts">
+    <table class="editor-limit">
+        <tr>
+            <td width="80">
+                <span>名称</span>
+            </td>
+            <td>
+                <span id="spnInviteGroupName">小组</span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <span>添加好友</span>
+            </td>
+            <td class="atlist">
+                <div class="add-search">
+                    <input id="txtInviteAddresserKeyword" type="text" class="search" placeholder="查找好友...">
+                    <span id="spnSearchInviteAddresser">搜索</span>
+                </div>
+                <div>
+                    <!-- 内容列表 -->
+                    <section class="contacts-list">
+                        <div id="divEmptyInviteAddresserFind" class="friend-list-empty"><span>没有找到相关联系人~</span></div>
+                        <ul id="ulInviteAddresserFindList" class="clear-fix"></ul>
+                        <div class="pagination" style="text-align: center; margin-bottom: 15px;">
+                            <div id="divFindInviteAddresserPage"></div>
+                        </div>
+                    </section>
+                </div>
+            </td>
+        </tr>
+    </table>
+</section>
+
+<!-- 小组信息 -->
+<section id="sctDetailGroup" class="dialog-contacts">
+    <table class="editor-limit">
+        <tr>
+            <td class="atlist">
+                <section class="contacts-list">
+                    <div id="divEmptyDetailGroupFind" class="friend-list-empty"><span>没有找到相关成员~</span></div>
+                    <ul id="ulDetailGroupFindList" class="clear-fix"></ul>
+                    <!--<div class="pagination" style="text-align: center; margin-bottom: 15px;">
+                        <div id="divFindDetailGroupPage"></div>
+                    </div>-->
+                </section>
+            </td>
+        </tr>
+    </table>
+</section>

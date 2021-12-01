@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+	<head>
+		<meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<title>智能制造知识服务朋友圈平台</title>
+        <link rel="shortcut icon" href="images/favicon32.ico" type="image/x-icon" />
+		<link rel="stylesheet" href="css/base.css">
+        <link href="css/jquery-ui.css" rel="stylesheet" />
+		<link rel="stylesheet" href="css/index.css">
+	</head>
+	<body>
+		<div class="page">
+			<!-- === 开始主体内容 中心登录区域 === -->
+			<main role="main" class="login clear-fix">
+				<section class="login-title">
+					<img src="images/login-title.png"/>
+				</section>
+				<section class="login-right">
+					<section class="login-area">
+						<div class="login-user-title">
+							用户登录
+                        </div>
+                        <div class="login-shift">
+							<img src="images/footer_code.jpg" title="二维码登录" class="login-code"/>
+							<img src="images/user.png" title="用户登录" class="login-user"/>
+						</div>
+						<!-- 登录区域 -->
+                        <section id="sctLoginForm" class="login-form">
+                            <div class="login-item">
+                                <input type="text" id="txtUserCode" class="login-input" placeholder="用户名/已注册手机" autofocus>
+                                <div id="txtUserCodeTip" class="error-info">请输入用户名/已注册手机</div>
+                            </div>
+                            <div class="login-item">
+                                <input type="password" id="txtPassword" class="login-input" placeholder="密码">
+                                <div id="txtPasswordTip" class="error-info">请输入密码</div>
+                            </div>
+                            <a href="javascript:void(0);" class="login-btn" id="aLogin">登&nbsp;&nbsp;录</a>
+                            <div class="login-item login-opt">
+                                <span class="remember-me">
+                                    <input type="checkbox" id="ckRememberMe" value="">
+                                    <label class="opt-text">记住用户名</label>
+                                </span>
+                                <a href="javascript:void(0);" class="opt-text" id="aGoForgetPw">忘记密码？</a>
+                            </div>
+                            <div class="signin-text"> 
+								还没有账户？&nbsp;<a href="../biz/signin.html" target="_blank">去注册</a> 
+							</div>
+                        </section>
+                        <!-- 二维码区域 -->
+						<section class="login-qr-code">
+                            <div class="login-item" id="divLoginCode">
+                                <img src="images/regist.png" />
+                            </div>
+						</section>
+						<!-- 忘记密码 -->
+                        <section id="sctPasswordForm" class="gotPw-form">
+                            <div class="pw-title">
+                                忘记密码？<br />请输入邮箱，我们将帮您找回<br />（该系统暂不面向企业和机构开放）
+                            </div>
+                            <div class="login-item">
+                                <input type="text" id="txtEmail" class="login-input" placeholder="邮箱地址" autofocus>
+                                <div id="txtEmailTip" class="error-info">请输入邮箱</div>
+                            </div>
+                            <a href="javascript:void(0);" class="login-btn" id="aFindPassword">找回密码</a>
+                            <div class="login-item return-login">
+                                <a href="javascript:void(0);" class="opt-text" id="aBackLogin">登录</a>
+                            </div>
+                        </section> 
+				</section>
+                    <section class="index-note">
+                        建议使用<a href="http://www.google.cn/chrome/browser/desktop/" target="_blank" title="点击下载">Chrome25+</a>、
+                        <a href="https://www.mozilla.org/en-US/firefox/new/" target="_blank" title="点击下载">Firefox19+</a>、
+                        <a href="https://support.microsoft.com/zh-cn/help/18520/download-internet-explorer-11-offline-installer" target="_blank" title="点击下载">IE10+</a>
+                        浏览器。
+                    </section>
+				</section>
+                <!-- 普通对话框 -->
+                <section class="dialog-normal">
+                    <p class="dialog-content"></p>
+                </section>
+			</main>
+		</div>
+        <div id="divMiicCors"></div>
+        <!-- JAVA SCRIPT-->
+        <script src="js/base/jquery-2.1.3.min.js"></script>
+        <script src="js/base/jquery-ui-11.4-custom.min.js"></script>
+        <script src="js/base/MicrosoftAjax.js"></script>
+        <script src="js/base/jquery.cookie.js"></script>
+        <script src="js/common/miic_common-1.0.js"></script>
+        <script src="js/common/miic-md5.js"></script>
+        <script src="js/page/common.js"></script>
+        <script src="js/page/index/index.js"></script>
+        <script src="js/page/index/index-view.js"></script>
+        <script src="http://res.wx.qq.com/connect/zh_CN/htmledition/js/wxLogin.js"></script>
+	</body>
+</html>

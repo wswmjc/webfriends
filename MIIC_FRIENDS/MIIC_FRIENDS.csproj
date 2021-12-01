@@ -1,0 +1,289 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CB378309-20C4-432E-B4F1-E485A5742C08}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Miic</RootNamespace>
+    <AssemblyName>MiicFriends</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <CodeContractsAssemblyMode>1</CodeContractsAssemblyMode>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeContractsEnableRuntimeChecking>True</CodeContractsEnableRuntimeChecking>
+    <CodeContractsRuntimeOnlyPublicSurface>False</CodeContractsRuntimeOnlyPublicSurface>
+    <CodeContractsRuntimeThrowOnFailure>True</CodeContractsRuntimeThrowOnFailure>
+    <CodeContractsRuntimeCallSiteRequires>False</CodeContractsRuntimeCallSiteRequires>
+    <CodeContractsRuntimeSkipQuantifiers>False</CodeContractsRuntimeSkipQuantifiers>
+    <CodeContractsRunCodeAnalysis>False</CodeContractsRunCodeAnalysis>
+    <CodeContractsNonNullObligations>True</CodeContractsNonNullObligations>
+    <CodeContractsBoundsObligations>True</CodeContractsBoundsObligations>
+    <CodeContractsArithmeticObligations>True</CodeContractsArithmeticObligations>
+    <CodeContractsEnumObligations>True</CodeContractsEnumObligations>
+    <CodeContractsRedundantAssumptions>True</CodeContractsRedundantAssumptions>
+    <CodeContractsAssertsToContractsCheckBox>True</CodeContractsAssertsToContractsCheckBox>
+    <CodeContractsRedundantTests>True</CodeContractsRedundantTests>
+    <CodeContractsMissingPublicRequiresAsWarnings>True</CodeContractsMissingPublicRequiresAsWarnings>
+    <CodeContractsMissingPublicEnsuresAsWarnings>False</CodeContractsMissingPublicEnsuresAsWarnings>
+    <CodeContractsInferRequires>True</CodeContractsInferRequires>
+    <CodeContractsInferEnsures>False</CodeContractsInferEnsures>
+    <CodeContractsInferEnsuresAutoProperties>True</CodeContractsInferEnsuresAutoProperties>
+    <CodeContractsInferObjectInvariants>False</CodeContractsInferObjectInvariants>
+    <CodeContractsSuggestAssumptions>False</CodeContractsSuggestAssumptions>
+    <CodeContractsSuggestAssumptionsForCallees>False</CodeContractsSuggestAssumptionsForCallees>
+    <CodeContractsSuggestRequires>False</CodeContractsSuggestRequires>
+    <CodeContractsNecessaryEnsures>True</CodeContractsNecessaryEnsures>
+    <CodeContractsSuggestObjectInvariants>False</CodeContractsSuggestObjectInvariants>
+    <CodeContractsSuggestReadonly>True</CodeContractsSuggestReadonly>
+    <CodeContractsRunInBackground>True</CodeContractsRunInBackground>
+    <CodeContractsShowSquigglies>True</CodeContractsShowSquigglies>
+    <CodeContractsUseBaseLine>False</CodeContractsUseBaseLine>
+    <CodeContractsEmitXMLDocs>False</CodeContractsEmitXMLDocs>
+    <CodeContractsCustomRewriterAssembly>MiicFriends</CodeContractsCustomRewriterAssembly>
+    <CodeContractsCustomRewriterClass />
+    <CodeContractsLibPaths />
+    <CodeContractsExtraRewriteOptions />
+    <CodeContractsExtraAnalysisOptions />
+    <CodeContractsSQLServerOption />
+    <CodeContractsBaseLineFile />
+    <CodeContractsCacheAnalysisResults>True</CodeContractsCacheAnalysisResults>
+    <CodeContractsSkipAnalysisIfCannotConnectToCache>False</CodeContractsSkipAnalysisIfCannotConnectToCache>
+    <CodeContractsFailBuildOnWarnings>False</CodeContractsFailBuildOnWarnings>
+    <CodeContractsBeingOptimisticOnExternal>True</CodeContractsBeingOptimisticOnExternal>
+    <CodeContractsRuntimeCheckingLevel>Full</CodeContractsRuntimeCheckingLevel>
+    <CodeContractsReferenceAssembly>%28none%29</CodeContractsReferenceAssembly>
+    <CodeContractsAnalysisWarningLevel>0</CodeContractsAnalysisWarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="LitJson, Version=0.7.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\MIIC_USER_BASE\bin\Debug\LitJson.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="ThoughtWorks.QRCode, Version=1.0.3990.25764, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\MIIC_USER_BASE\bin\Debug\ThoughtWorks.QRCode.dll</HintPath>
+    </Reference>
+    <Reference Include="TopSdk">
+      <HintPath>..\MIIC_LIBRARY\TopSdk.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DAO\AddressBook\AddressBookInfoDao.Application.cs" />
+    <Compile Include="DAO\AddressBook\AddressBookInfoDao.cs" />
+    <Compile Include="DAO\Community\Behavior\BrowseInfoDao.cs" />
+    <Compile Include="DAO\Community\Behavior\CollectInfoDao.cs" />
+    <Compile Include="DAO\Community\Behavior\CommentInfoDao.cs" />
+    <Compile Include="DAO\Community\CommunityInfoDao.cs" />
+    <Compile Include="DAO\Community\CommunityInfoDao.Member.cs" />
+    <Compile Include="DAO\Community\Behavior\PraiseInfoDao.cs" />
+    <Compile Include="DAO\Community\Behavior\ReportInfoDao.cs" />
+    <Compile Include="DAO\Community\Behavior\TreadInfoDao.cs" />
+    <Compile Include="DAO\Community\LabelInfoDao.cs" />
+    <Compile Include="DAO\Community\MessageInfoDao.cs" />
+    <Compile Include="DAO\Community\MessageInfoDao.Topic.cs" />
+    <Compile Include="DAO\Community\PublishInfoDao.Accessory.cs" />
+    <Compile Include="DAO\Community\PublishInfoDao.cs" />
+    <Compile Include="DAO\Group\GroupInfoDao.cs" />
+    <Compile Include="DAO\Group\GroupInfoDao.Member.cs" />
+    <Compile Include="DAO\Group\MessageInfoDao.cs" />
+    <Compile Include="DAO\Group\MessageInfoDao.Topic.cs" />
+    <Compile Include="DAO\Moments\Behavior\BrowseInfoDao.cs" />
+    <Compile Include="DAO\Moments\Behavior\CollectInfoDao.cs" />
+    <Compile Include="DAO\Moments\Behavior\CommentInfoDao.cs" />
+    <Compile Include="DAO\Moments\Behavior\PraiseInfoDao.cs" />
+    <Compile Include="DAO\Moments\Behavior\ReportInfoDao.cs" />
+    <Compile Include="DAO\Moments\Behavior\TreadInfoDao.cs" />
+    <Compile Include="DAO\Moments\PublishInfoDao.Accessory.cs" />
+    <Compile Include="DAO\Moments\PublishInfoDao.cs" />
+    <Compile Include="DAO\Notice\MessageInfoDao.cs" />
+    <Compile Include="DAO\Notice\NoticeInfoDao.cs" />
+    <Compile Include="DAO\Person\UserInfoDao.cs" />
+    <Compile Include="DTO\AddressBook\AddressBookApplicationInfo.cs" />
+    <Compile Include="DTO\AddressBook\AddressBookInfo.cs" />
+    <Compile Include="DTO\Community\AccessoryInfo.cs" />
+    <Compile Include="DTO\Community\Behavior\CollectInfo.cs" />
+    <Compile Include="DTO\Community\Behavior\CommentInfo.cs" />
+    <Compile Include="DTO\Community\Behavior\BrowseInfo.cs" />
+    <Compile Include="DTO\Community\Behavior\ReportInfo.cs" />
+    <Compile Include="DTO\Community\CommunityInfo.cs" />
+    <Compile Include="DTO\Community\CommunityApplicationInfo.cs" />
+    <Compile Include="DTO\Community\CommunityMember.cs" />
+    <Compile Include="DTO\Community\Behavior\PraiseInfo.cs" />
+    <Compile Include="DTO\Community\CommunitySearchInfo.cs" />
+    <Compile Include="DTO\Community\CommunityStatistics.cs" />
+    <Compile Include="DTO\Community\LabelSearchInfo.cs" />
+    <Compile Include="DTO\Community\MessageShowInfo.cs" />
+    <Compile Include="DTO\Community\PublishInfoWithUserInfo.cs" />
+    <Compile Include="DTO\Community\PublishLabelRelation.cs" />
+    <Compile Include="DTO\Community\MessageInfo.cs" />
+    <Compile Include="DTO\Community\PublishInfo.cs" />
+    <Compile Include="DTO\Community\Behavior\TreadInfo.cs" />
+    <Compile Include="DTO\Community\TopicInfo.cs" />
+    <Compile Include="DTO\Community\TopicShowInfo.cs" />
+    <Compile Include="DTO\General\Behavior\GeneralCollectInfo.cs" />
+    <Compile Include="DTO\General\Behavior\GeneralPraiseInfo.cs" />
+    <Compile Include="DTO\General\Behavior\GeneralReportInfo.cs" />
+    <Compile Include="DTO\General\Behavior\GeneralTreadInfo.cs" />
+    <Compile Include="DTO\General\Behavior\GeneralCommentInfo.cs" />
+    <Compile Include="DTO\General\Common\GeneralSimpleProjectInfo.cs" />
+    <Compile Include="DTO\General\Behavior\GeneralBrowseInfo.cs" />
+    <Compile Include="DTO\General\Notice\GeneralNoticeInfo.cs" />
+    <Compile Include="DTO\General\SimpleGroup\GeneralSimpleGroupInfo.cs" />
+    <Compile Include="DTO\General\SimpleGroup\GeneralSimpleGroupMember.cs" />
+    <Compile Include="DTO\General\SimpleGroup\GeneralSimpleMessageInfo.cs" />
+    <Compile Include="DTO\Group\GroupInfo.cs" />
+    <Compile Include="DTO\Group\GroupMember.cs" />
+    <Compile Include="DTO\Group\MessageInfo.cs" />
+    <Compile Include="DTO\Group\MessageShowInfo.cs" />
+    <Compile Include="DTO\Group\TopicInfo.cs" />
+    <Compile Include="DTO\Group\TopicShowInfo.cs" />
+    <Compile Include="DTO\Moments\AccessoryInfo.cs" />
+    <Compile Include="DTO\Moments\AddressPublishInfo.cs" />
+    <Compile Include="DTO\Moments\Behavior\CollectInfo.cs" />
+    <Compile Include="DTO\Moments\Behavior\CommentInfo.cs" />
+    <Compile Include="DTO\Moments\Behavior\PraiseInfo.cs" />
+    <Compile Include="DTO\Moments\Behavior\ReportInfo.cs" />
+    <Compile Include="DTO\Moments\Behavior\TreadInfo.cs" />
+    <Compile Include="DTO\Moments\Behavior\BrowseInfo.cs" />
+    <Compile Include="DTO\Moments\PublishInfo.cs" />
+    <Compile Include="DTO\Notice\MessageInfo.cs" />
+    <Compile Include="DTO\Notice\NoticeInfo.cs" />
+    <Compile Include="DTO\Notice\NoticeShowInfo.cs" />
+    <Compile Include="DTO\Person\SimpleUserView.cs" />
+    <Compile Include="DVO\AddressBook\ApproveView.cs" />
+    <Compile Include="DVO\AddressBook\SetCanSeeAddresserView.cs" />
+    <Compile Include="DVO\AddressBook\SetCanSeeMeView.cs" />
+    <Compile Include="DVO\AddressBook\SetOftenUsedView.cs" />
+    <Compile Include="DVO\AddressBook\SetRemarkView.cs" />
+    <Compile Include="DVO\Common\Comment\BroadcastCommentView.cs" />
+    <Compile Include="DVO\Common\Comment\CommentView.cs" />
+    <Compile Include="DVO\Common\Comment\ToCommentView.cs" />
+    <Compile Include="DVO\Common\Date\GeneralDateView.cs" />
+    <Compile Include="DVO\Common\Date\MyDateView.cs" />
+    <Compile Include="DVO\Common\Date\PersonDateView.cs" />
+    <Compile Include="DVO\Common\EditStatusView.cs" />
+    <Compile Include="DVO\Common\Keyword\KeywordView.cs" />
+    <Compile Include="DVO\Common\Keyword\MyKeywordView.cs" />
+    <Compile Include="DVO\Common\Keyword\NoPersonKeywordView.cs" />
+    <Compile Include="DVO\Common\Keyword\PersonKeywordView.cs" />
+    <Compile Include="DVO\Common\ScoreConfig.cs" />
+    <Compile Include="DVO\Common\StatisticsSearchView.cs" />
+    <Compile Include="DVO\Common\SwapView.cs" />
+    <Compile Include="DVO\Community\ApproveView.cs" />
+    <Compile Include="DVO\Community\CommunityDateView.cs" />
+    <Compile Include="DVO\Community\CommunityTopView.cs" />
+    <Compile Include="DVO\Community\DraftSearchView.cs" />
+    <Compile Include="DVO\Community\MyCommunityBehaviorView.cs" />
+    <Compile Include="DVO\Community\NoPersonKeywordView.cs" />
+    <Compile Include="DVO\Community\SimpleLabelView.cs" />
+    <Compile Include="DVO\Community\TopicSearchView.cs" />
+    <Compile Include="DVO\ConfigSection\CommunityHotRateConfigSection.cs" />
+    <Compile Include="DVO\ConfigSection\ScoreConfigSection.cs" />
+    <Compile Include="DVO\Group\TopicSearchView.cs" />
+    <Compile Include="DVO\Moments\CommentSearchView.cs" />
+    <Compile Include="DVO\Moments\DraftSearchView.cs" />
+    <Compile Include="DVO\Moments\MyBehaviorView.cs" />
+    <Compile Include="DVO\Moments\Top\GeneralTopView.cs" />
+    <Compile Include="DVO\Moments\Top\MyTopView.cs" />
+    <Compile Include="DVO\Moments\Top\PersonTopView.cs" />
+    <Compile Include="DVO\Notice\UnreadNoticeView.cs" />
+    <Compile Include="DVO\Notice\NoticeUserView.cs" />
+    <Compile Include="DVO\Common\SimpleAccessoryView.cs" />
+    <Compile Include="DVO\Common\SimpleUserView.cs" />
+    <Compile Include="DVO\Group\SetRemarkView.cs" />
+    <Compile Include="DVO\Notice\MyNoticeView.cs" />
+    <Compile Include="DVO\SimpleGroup\MySimpleGroupSearchView.cs" />
+    <Compile Include="DVO\SimpleGroup\PersonSimpleGroupSearchView.cs" />
+    <Compile Include="DVO\SimpleGroup\GeneralSimpleGroupSearchView.cs" />
+    <Compile Include="IDAO\AddressBook\IAddressBookInfo.cs" />
+    <Compile Include="DTO\Community\LabelInfo.cs" />
+    <Compile Include="IDAO\Community\ICommunityBehavior.cs" />
+    <Compile Include="IDAO\Community\ICommunityInfo.cs" />
+    <Compile Include="IDAO\Community\ILabelInfo.cs" />
+    <Compile Include="IDAO\Community\IMessageInfo.cs" />
+    <Compile Include="IDAO\Community\IPublishInfo.cs" />
+    <Compile Include="IDAO\Group\IGroupInfo.cs" />
+    <Compile Include="IDAO\Group\IMessageInfo.cs" />
+    <Compile Include="IDAO\Moments\IBehavior.cs" />
+    <Compile Include="IDAO\Moments\IPublishInfo.cs" />
+    <Compile Include="IDAO\Notice\INoticeInfo.cs" />
+    <Compile Include="IDAO\Person\IUserInfo.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Setting\AddressBook\ApplyStatusSetting.cs" />
+    <Compile Include="Setting\Behavior\BehaviorTypeSetting.cs" />
+    <Compile Include="Setting\Common\BusinessTypeSetting.cs" />
+    <Compile Include="Setting\Common\AccFileTypeSetting.cs" />
+    <Compile Include="Setting\Common\PublishInfoBelongSetting.cs" />
+    <Compile Include="Setting\Common\PublishInfoTypeSetting.cs" />
+    <Compile Include="Setting\Community\ApplyStatusSetting.cs" />
+    <Compile Include="Setting\Notice\NoticeTypeSetting.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Debug\" />
+    <Folder Include="bin\Release\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\MIIC_LMS\MIIC_BASE\MiicLibrary.csproj">
+      <Project>{5f3bd4b9-e52f-4253-a302-9cfc63ba9462}</Project>
+      <Name>MiicLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MIIC_USER_BASE\MIIC_USER_BASE.csproj">
+      <Project>{81a096e8-a4a0-41ea-aa24-b585d1ea91ff}</Project>
+      <Name>MIIC_USER_BASE</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

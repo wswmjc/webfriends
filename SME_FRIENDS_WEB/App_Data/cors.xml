@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<root>
+  <!--管理平台-->
+  <node id="manage" src="sns.mictalk.cn" credentials="true" heads="x-requested-with,content-type" methods="OPTIONS,POST,GET,PUT"></node>
+</root>

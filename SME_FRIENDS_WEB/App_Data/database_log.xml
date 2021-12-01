@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<root>
+  <node id="T" classname="DataBaseLogService" namespacename="Miic.Log" description="" path="c:\DatabaseLog"></node>
+  <node id="F" classname="NullLogService" namespacename="Miic.Log" description="" path=""></node>
+</root>

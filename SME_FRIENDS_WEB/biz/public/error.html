@@ -1,0 +1,106 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+	<head>
+		<meta charset="UTF-8">
+        <meta name="title" content="MICTalk-发现更宽更广的智能制造" />
+        <meta name="author" content="机械工业信息中心">
+        <meta name="description" content="MICTalk智能制造知识服务平台--致力于为智能制造相关企业提供高质量、全方位的专业信息化知识、原创文章和研究报告咨询服务，帮助人们便捷地分享彼此的知识、经验和见解。" />
+        <meta name="keywords" content="智能制造、两化融合、大数据、物联网、自动化、信息化、人工智能、工业4.0、中国制造2025、工业互联网、机器人、CPS、制造业" />
+		<title>MICTalk-发现更宽更广的智能制造</title>
+        <link href="../../css/base.css" rel="stylesheet" />
+        <link rel="stylesheet" href="../../css/main.css">
+	</head>
+	<body>
+		<div class="wrapper">
+			<header class="clear-fix">
+				<div alt="LOGO" class="logo">
+                    <img src="../../images/logo.png">
+				</div>
+				<nav class="clear-fix"></nav>
+				<div class="main-opts"></div>
+			</header>
+
+			<!-- 内容区域 -->
+			<div class="main-content">
+				<div class="sys-error-info">
+                    <img src="../../images/find.png">
+					<p style="height: 50px;"></p>
+					<div>很抱歉~</div>
+					<div id="divErrorTip"></div>
+					<div id="divErrorBar">
+                        <a href="javascript:void(0);" id="aBackToRegister" class="hide">我去注册</a>
+                        <a href="javascript:void(0);" id="aBackToLogin" class="hide">我去登录</a>
+						<a href="javaScript:void(0);" id="aBackToIndex">返回首页</a>
+                        <a href="javaScript:void(0);" id="aCloseSelf">关闭本页</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!--[if lt IE 9]><script src="//cdn.bootcss.com/html5shiv/r29/html5.js"></script><![endif]-->
+        <script src="../../js/base/jquery-2.1.3.min.js"></script>
+        <script src="../..//js/base/jquery-ui-11.4-custom.min.js"></script>
+        <script src="../../js/common/miic_common-1.0.js"></script>
+        <script src="../../js/common/miic_common_ui-1.0.js"></script>
+        <script type="text/javascript">
+            var tip_hook = {
+                unregist: 0,
+                unlogin: 1,
+                wxnocode: 2,
+                registwithnouserinfo: 3,
+                failedregist: 4,
+                wxfailedgetuserinfo: 5,
+                failedupdate: 6,
+                resetwithnouserinfo: 7,
+                uniquewx: 8,
+                invalidtoken:9
+                //...to extend
+            };
+            var tip_hooks = [];
+            tip_hooks[tip_hook.unregist] = "您还没有注册PYQ账号，请申请注册后再登录";
+            tip_hooks[tip_hook.unlogin] = "登录失败，请重新尝试";
+            tip_hooks[tip_hook.wxnocode] = "找不到微信Code，请联系管理员";
+            tip_hooks[tip_hook.registwithnouserinfo] = "注册信息未取到，请检查用户名邮箱和手机";
+            tip_hooks[tip_hook.failedregist] = "用户注册失败，请重新尝试";
+            tip_hooks[tip_hook.wxfailedgetuserinfo] = "微信拉取用户信息失败，请重新尝试";
+            tip_hooks[tip_hook.failedupdate] = "重置微信失败";
+            tip_hooks[tip_hook.resetwithnouserinfo] = "未携带重置微信申请的用户信息，请重新尝试";
+            tip_hooks[tip_hook.uniquewx] = "该微信已经被注册，请使用微信扫码登录";
+            tip_hooks[tip_hook.invalidtoken] = "TOKEN失效,请重新尝试";
+            $(document).ready(function () {
+                var error_tip = $.GetUri("TipCode") != undefined ? parseInt($.GetUri("TipCode")) : "";
+                if (!$.IsNullOrEmpty(error_tip)) {
+                    $("#divErrorTip").html(tip_hooks[error_tip]);
+                } else {
+                    $("#divErrorTip").empty();
+                }
+
+                if (error_tip == tip_hook.unregist) {
+                    $("#aBackToRegister").show().on("click", function (event) {
+                        window.location.href = "http://" + window.location.host + "?type=regist";
+                    });
+                }
+                if (error_tip == tip_hook.uniquewx) {
+                    $("#aBackToLogin").show().on("click", function (event) {
+                        window.location.href = "http://" + window.location.host + "?type=login";
+                    });
+                }
+                $("#aBackToIndex").on("click", function (event) {
+                    window.location.href = "http://" + window.location.host;
+                });
+                $("#aCloseSelf").on("click", function (event) {
+                    var browserName = navigator.appName;
+                    if (browserName == "Netscape") {
+                        var opened = window.open('about:blank', '_self');
+                        opened.opener = null;
+                        opened.close();
+                    } else if (browserName == "Microsoft Internet Explorer") {
+                        window.opener = null;
+                        window.open('', '_self');
+                        window.close();
+                    }
+                });
+            });
+        </script>
+	</body>
+</html>

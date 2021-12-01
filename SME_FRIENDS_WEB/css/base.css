@@ -1,0 +1,214 @@
+﻿@charset "utf-8";
+
+*{
+    box-sizing: border-box;
+}
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center, main,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, input,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font: 14px, sans-serif;
+	vertical-align: baseline;
+	outline: none;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+/*  ================================================================================
+	Page style --- xn 2016-07-21
+	Some style for the current website.
+	To adjust the element for your need.
+    No responsable coding.
+===================================================================================*/
+html,
+body {
+    width: 100%;
+    font-family: "微软雅黑",sans-serif;
+    font-size: 14px;
+    color: #666;
+}
+body {
+	line-height: 1;
+	text-align: center;
+	background: #fff;
+    overflow-y: scroll;
+}
+ol,
+ul,
+ul li {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+	outline: none;
+    color: #999;
+}
+a:hover {
+	color: #282828;
+}
+img {
+	border: none;
+}
+button::-moz-focus-inner,
+input[type="reset"]::-moz-focus-inner,
+input[type="button"]::-moz-focus-inner,
+input[type="submit"]::-moz-focus-inner {
+  	border: 0;
+}
+
+input,
+textarea,
+select,
+button {
+	blr: expression_r(this.onFocus=this.blur());  /*支持ie*/
+	outline: none;
+	border: 0;
+	cursor: pointer;
+	text-decoration: none;
+	/*font-family: "微软雅黑暗";*/
+}
+input:focus,
+textarea:focus {
+	border-color: #999;
+}
+
+
+/* cancel float */
+.clear-fix {
+	*overflow: hidden;
+	*zoom: 1;
+}
+.clear-fix::after {
+	display: table;
+	content: "";
+	width: 0;
+	clear: both;
+}
+
+
+
+/* plugin jquery.baxslider.css */
+.bx-pager-item {
+   display: inline-block;
+}
+.bx-pager-item a, .bx-pager .bx-pager-item {
+   background-color: transparent;
+   border: 0 none;
+   color: transparent;
+   font: 0px/0 a;
+   text-shadow: none;
+}
+.bx-pager-item .bx-pager-link {
+    background: #aaa none repeat scroll 0 0;
+    border-radius: 7px;
+    height: 7px;
+    margin-left: 3px;
+    transition: width 0.5s ease-out 0s;
+    width: 7px;
+}
+.bx-pager-item .bx-pager-link {
+    display: block;
+}
+.bx-pager-item .bx-pager-link.active {
+    background: #666 none repeat scroll 0 0;
+    width: 12px;
+}
+.bx-pager {
+    position: absolute;
+    top: 10px;
+    right: 30px;
+}
+
+.input-normal {
+	border: 1px solid #ccc;
+	padding: 5px 10px;
+	background-color: #fff;
+	font-size: 14px;
+	width: 240px;
+	cursor: text;
+}
+
+
+
+
+/* =========================================================================
+    服务协议
+============================================================================*/
+.aboutus-block {
+	text-align: left;
+	width: 1000px;
+	margin: 0 auto;
+	margin-top: -30px;
+	background-color: #fff;
+}
+.aboutus-block h2 {
+	float: none;
+	line-height: 3;
+	font-size: 36px;
+	padding-top: 20px;
+	color: #282828;
+	text-align: center;
+}
+.aboutus-block .about-title {
+	display: inline-block;
+	text-align: left;
+	font-size: 24px;
+	font-weight: bold;
+	color: #2da8e1;
+	padding: 10px 50px;
+	background-color: #dde5eb;
+	margin-top: 20px;
+}
+.aboutus-block .about-content {
+	text-align: center;
+	padding: 20px 50px;
+}
+.aboutus-block p {
+	padding: 20px 0;
+	line-height: 1.5;
+	font-size: 16px;
+	color: #666;
+} 
+/*resend=============================================================================
+	header area
+	================================================================================*/
+.logo {
+  float: left;
+  margin: 10px 0;
+  color: #0088fe;
+  font-size: 30px;
+}
+
+.logo img{
+    cursor:pointer;
+}
+.hide {
+ display:none;
+}
+

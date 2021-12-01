@@ -1,0 +1,93 @@
+<!-- 账户信息 -->
+<section>
+    <div class="user-account">
+        <div class="account-cover"></div>
+        <div class="account-opts clear-fix">
+            <div class="account-avatar">
+                <img id="imgUserUrl" src="../images/user/4.jpg">
+            </div>
+            <div class="account-info">
+                <div id="divSocialCode" class="user-name">
+                    用户名
+                </div>
+                <div class="clear-fix">
+                    <div class="user-info-left clear-fix">
+                        <a href="javascript:void(0);">
+                            <span class="icon-optSet icon-img icon-madel-green"></span>
+                            <span id="spnMyUserLevel" class="user-level">V1</span>
+                        </a>
+                        <a id="aPublishCount" href="javascript:void(0);" title="查看我的发布？">
+                            <div id="divPublishCount" class="user-num">0</div>
+                            <div class="user-category">发布信息</div>
+                        </a>
+                        <a id="aCommunityCount" href="javascript:void(0);" title="查看我所在的行业圈子？">
+                            <div id="divCommunityCount" class="user-num">0</div>
+                            <div class="user-category">所在圈子</div>
+                        </a>
+                        <a id="aGroupCount" href="javascript:void(0);" title="查看我所在的讨论组？">
+                            <div id="divGroupCount" class="user-num">0</div>
+                            <div class="user-category">所在讨论组</div>
+                        </a>
+                        <a id="aAddressBookCount" href="javascript:void(0);" class="contacts" title="查看我的通讯录？">
+                            <div id="divAddressBookCount" class="user-num">0</div>
+                            <div class="user-category">通讯录</div>
+                        </a>
+                    </div>
+                    <div id="divMyEdit" class="user-info-right">      
+                        <a id="aSetMyTheme" href="javascript:void(0);" title="主题" class="theme">
+                            <span class="icon-optSet icon-img icon-skin"></span>
+                        </a>
+                        <a id="aCollectList" href="javascript:void(0);" title="收藏" class="favorite">
+                            <span class="icon-optSet icon-img icon-star"></span>
+                        </a>
+                        <a id="aDraftList" href="javascript:void(0);" title="草稿箱" class="draft">
+                            <span class="icon-optSet icon-img icon-draft"></span>
+                        </a>
+                        <a href="javascript:void(0);" title="发文章" class="editor" id="aEditor">
+                            <span class="icon-optSet icon-img icon-editor"></span>
+                        </a>
+                        <a href="javascript:void(0);" title="发消息" class="message" id="aMessage">
+                            <span class="icon-optSet icon-img icon-text"></span>
+                        </a>
+                        <a href="javascript:void(0);" title="回家看看" id="aBackHome" style="display:none;">
+                           <span class="icon-optSet icon-img icon-back-self"></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 列表区域 -->
+<section class="friend-content">
+
+        <!-- 首页选项卡 -->
+        <div id="divMyFriendsTabs"  class="friend-tabs">
+            <a href="javascript:void(0);" class="selected" name="listFriend">
+                朋友
+            </a>
+            <a href="javascript:void(0);" name="listCircle">
+                圈子
+            </a>
+            <a href="javascript:void(0);" name="listGroup">
+                讨论组
+            </a>
+            <a href="javascript:void(0);" name="listNotice">
+                公告
+            </a>
+        </div>
+        
+        <!-- 选项卡内容，默认朋友消息列表 -->
+        <div id="divTabList" class="friend-tabs-content"></div>
+
+</section>
+
+
+<!-- 时间轴 -->
+<div id="divTimeAxis" class="friend-filter">
+    <ul class="filter"  id="ulDateList"></ul>
+</div>
+
+
+ 

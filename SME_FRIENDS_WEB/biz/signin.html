@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+    <head>
+	  <meta charset="UTF-8">
+	  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	  <title>智能制造知识服务朋友圈平台</title>
+        <link rel="shortcut icon" href="../images/favicon32.ico" type="image/x-icon" />
+	  <link rel="stylesheet" href="../css/base.css">
+	  <link rel="stylesheet" href="../css/index.css">
+        <link href="../css/jquery-ui.css" rel="stylesheet" />
+	  <link rel="stylesheet" href="css/index.css">
+    </head>
+    <body>
+	  <div class="page">
+		<!-- === 开始主体内容 中心登录区域 === -->
+		<main role="main" class="login">
+		    <!-- 登录区域 -->
+			<div class="signin-title">智能制造知识服务朋友圈平台</div>
+		    <section class="login-area dialog-signin" id="">
+				<div class="login-shift">
+                    <!--切换注册方式-->
+					<img src="../images/footer_code.jpg" title="二维码快速注册" class="login-code" id="signin-code">
+					<img src="../images/user.png" title="用户注册" class="login-user" id="sigin-user">
+				</div>
+				<div class="login-user-title">
+                    用户注册
+				</div>
+                <!--二维码注册的页面-->
+                <div id="divRegistCodeForm" class="quik-code">
+                    <div id="divWxUsualRegist">
+                        <img src="../images/regist.png" alt="">
+                    </div>
+                    <div class="regist-note">
+                        MICTalk提示：<br />　　快速注册用户，可一步注册并登陆系统，登陆系统后并请将用户信息补全，以方便未来账号信息的找回
+                    </div>
+                </div>
+                <!--用户自己输入注册页面-->
+                <div id="divRegitForm" class="quik-user">
+                    <div id="">
+                        <div class="regit-block">
+                            <input placeholder="用户名" type="numxstr" class="login-input" id="txtUserCode" required>
+                            <input placeholder="邮箱地址" type="email" class="login-input" id="txtEmail" required>
+                            <input placeholder="手机号" type="mobile" class="login-input" id="txtMobile" required>
+                            <div style="position: relative;text-align:left;">
+                                <input placeholder="短信验证码" type="numstr" class="login-input" id="txtMsgCode" required style="width:222px;">
+                                <a href="javascript:;" id="aSmsBtn" class="btn-follow sms-unvalid">短信验证</a>
+                            </div>
+                            <div class="notice">
+                                <input type="checkbox" id="ckRegistDisclaimer">
+                                您同意并愿意遵守MICTalk<a href="../biz/public/agreement.html" class="login-link" target="_blank">用户协议</a>
+                            </div>
+                        </div>
+                        <a href="javascript:void(0);" class="login-btn" id="btRegist">注&nbsp;&nbsp;册</a>
+                    </div>
+                </div>
+				<div class="signin-text">
+					已经注册账户,&nbsp;<a href="../index.html">直接登录</a>
+				</div>
+			</section>
+	  </main>
+	  </div>
+        <div id="divMiicCors"></div>
+	  <!-- JAVA SCRIPT-->
+	  <script src="../js/base/jquery-2.1.3.min.js"></script>
+	  <script src="../js/base/jquery-ui-11.4-custom.min.js"></script> 
+        <script src="../js/base/MicrosoftAjax.js"></script>
+        <script src="../js/base/jquery.cookie.js"></script>
+        <script src="../js/common/miic_common-1.0.js"></script>
+        <script src="../js/common/miic-md5.js"></script>
+        <script src="../js/base/jquery-html5Validate.js"></script>
+        <script src="../js/page/common.js"></script>
+        <script src="../js/page/signin.js"></script>
+        <script src="http://res.wx.qq.com/connect/zh_CN/htmledition/js/wxLogin.js"></script>
+    </body>
+</html>
+	    

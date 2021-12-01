@@ -1,0 +1,248 @@
+<div class="page-header clear-fix">
+    <div class="page-title">个人信息</div>
+    <div class="page-header-right">
+        <a class="btn-opts changepw" href="javascript: void(0);" id="aResetWX">重置微信</a>
+    </div>
+</div>
+<div class="account-form">
+    <!-- 个人信息 -->
+    <table class="form-person" style="display:block;" novalidate="novalidate" id="tbPersonUser">
+        <tbody>
+            <tr>
+                <td width="120">头像</td>
+                <td>
+                    <div class="setting-avatar" id="divUserAvatar">
+                        <img id="imgUserPhoto" alt="头像" src="../images/user-default.png">
+                        <form method="post" action="" enctype="multipart/form-data" id="fmUser">
+                            <a class="files" href="javascript:void(0);">
+                                <input accept=".png,.jpg" name="fileUser" id="fileUser" type="file" class="input-normal"><!--,.gif-->
+                            </a>
+                        </form>
+                        <input class="BtnUpload_photo" value="编辑头像" style="display: none;" type="button">
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td width="120">用户名</td>
+                <td id="tdSocialCode" class="form-text"></td>
+            </tr>
+            <tr>
+                <td>姓名<b class="text-note">*</b></td>
+                <td>
+                    <input class="input-normal" id="txtName" required="" type="text">
+                    <label for="canSearch"><input id="txtCanSearch" type="checkbox">可被搜索</label>
+                    <div class="content-tiptop">
+                        <span>请输入用户的真实姓名</span>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>昵称<b class="text-note">*</b></td>
+                <td>
+                    <input class="input-normal" id="txtNick" required="" type="text">
+                    <div class="content-tiptop">
+                        <span>请输入用户的昵称</span>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>签名<b class="text-note">*</b></td>
+                <td>
+                    <input class="input-normal" id="txtSocialRemark" required="" type="text">
+                    <div class="content-tiptop">
+                        <span>请选择您的签名</span>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>性别<b class="text-note">*</b></td>
+                <td>
+                    <label for="male"><input name="rdUserSex" value="0" checked="" type="radio">男</label>
+                    <label for="female"><input name="rdUserSex" value="1" type="radio">女</label>
+                    <div class="content-tiptop">
+                        <span>请选择用户的性别</span>
+                    </div>
+                </td>
+            </tr>
+            <!-- <tr>
+                <td width="100">民族<b class="text-note">*</b></td>
+                <td>
+                    <select class="select-normal" id="sltUserNation" required>
+                        <option value="">--- 请选择 ---</option>
+                    </select>
+                    <div class="content-tiptop">
+                        <span>请选择用户的民族</span>
+                    </div>
+                </td>
+            </tr> -->
+            <tr>
+                <td>所在地</td>
+                <td>
+                    <input class="input-normal" id="txtLocation" required="" type="text">
+                    <div class="content-tiptop">
+                        <span>请选择您的所在地</span>
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td width="100">擅长领域<b class="text-note">*</b></td>
+                <td>
+                    <select class="select-normal" id="sltSubject" required>
+                        <option value="">--- 请选择 ---</option>
+                    </select>
+                    <div class="content-tiptop">
+                        <span>请选择擅长领域</span>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td width="130">所在单位（学校）<b class="text-note">*</b></td>
+                <td>
+                    <input class="input-normal" id="txtOrgName" data-max="100" required="" type="text">
+                    <div class="content-tiptop">
+                        <span>请输入该用户的所在单位（学校）</span>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <hr>
+                </td>
+            </tr>
+            <tr>
+                <td>个人简介<b class="text-note">*</b></td>
+                <td>
+                    <textarea id="txtRemark" class="textarea-memo"></textarea>
+                    <div class="content-tiptop">
+                        <span>请输入您的个人简介(<b class="text-note">200</b>字以内)</span>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <hr>
+                </td>
+            </tr>
+            <tr>
+                <td>手机<b class="text-note">*</b></td>
+                <td>
+                    <input class="input-normal" id="txtMobile" type="mobile" required>
+                    <span id="spnMobileIdentify" class="init-hide">
+                        <input class="input-short" id="txtAccountMsgCode" type="numstr">
+                        <a href="javascript:void(0);" id="aAccountSmsBtn" class=" btn-follow sms-unvalid" style="padding:3px 10px;">获取验证码</a>
+                        <a href="javascript:void(0);" id="aAccountSmsConfirmBtn" class=" btn-follow sms-unvalid" style="padding:3px 10px;">短信验证</a>
+                    </span>
+                    <span class="sms-ok" id="spnMiComplete">√&nbsp;已验证</span>
+                    <div class="content-tiptop">
+                        <span>请输入您的手机号码 并进行验证</span>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>Email<b class="text-note">*</b></td>
+                <td>
+                    <input class="input-long" id="txtEmail" required="" type="email">
+                    <div class="content-tiptop">
+                        <span>请输入该用户的电子邮件地址</span>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>QQ</td>
+                <td>
+                    <input class="input-normal" id="txtQQ" type="qq">
+                    <div class="content-tiptop">
+                        <span>请输入该用户的QQ号码</span>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>微信</td>
+                <td>
+                    <input class="input-normal" id="txtWeChat" type="qq">
+                    <div class="content-tiptop">
+                        <span>请输入微信</span>
+                    </div>
+                </td>
+            </tr>
+            <!-- <tr>
+                <td>联系电话</td>
+                <td>
+                    <input class="input-normal" id="txtTel" type="tel">
+                    <div class="content-tiptop">
+                        <span>请输入该用户的联系电话</span>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>传真</td>
+                <td>
+                    <input class="input-normal" id="txtFax" type="fax">
+                    <div class="content-tiptop">
+                        <span>请输入该用户的传真号码</span>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>主要职责</td>
+                <td>
+                    <input class="input-long" id="txtDuty" data-max="50" type="text">
+                    <div class="content-tiptop">
+                        <span>请输入该用户的所在主要职责</span>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>毕业院校</td>
+                <td>
+                    <input class="input-normal" id="txtUniversity" data-max="50" type="text">
+                    <div class="content-tiptop">
+                        <span>请输入该用户的毕业院校</span>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>座右铭</td>
+                <td>
+                    <textarea class="textarea-memo" id="txtMotto"></textarea>
+                    <div class="content-tiptop">
+                        <span>请输入该用户的座右铭</span>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>个人备注</td>
+                <td>
+                    <textarea class="textarea-memo" id="txtRemark"></textarea>
+                    <div class="content-tiptop">
+                        <span>请输入该用户的个人备注</span>
+                    </div>
+                </td>
+            </tr> -->
+        </tbody>
+    </table>
+    <section class="content-submit">
+        <a href="javascript:void(0);" class="btn-login" id="aBack">返回</a>
+        <a href="javascript:void(0);" class="btn-login" id="aUpdate">保存</a>
+    </section>
+    
+    
+</div>
+<!-- 微信重置 -->
+<section class="dialog-signin" id="sctWxRest">
+    <!--<div class="quik-code">
+        <div id="divWxReset"></div>
+    </div>-->
+    <div class="talk-code">
+        <div class="common-code">
+            <img id="imgResetCode" src="">
+        </div>
+        <div>
+            <p>请使用微信扫描二维码<br />进行微信重置</p>
+        </div>
+        <div style="text-align:center;margin-top:10px;" class="btn-pay-ok" id="divResetSuccess">
+            <a href="javascript:void(0);" class="btn-follow-dialog">重置成功后请点击确认</a>
+        </div>
+    </div>
+</section>

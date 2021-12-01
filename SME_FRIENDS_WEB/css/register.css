@@ -1,0 +1,153 @@
+﻿@charset "utf-8";
+
+html {
+	width: 100%;
+	height: 100%;
+}
+body {
+	width: 100%;
+	height: 100%;
+    background: url("../images/login-bg.jpg") top left repeat-y #fff;
+    min-width: 1260px;
+}
+.page {
+    width: 850px;
+    margin:  0 auto;
+}
+
+/* =========================================================================
+    左侧_个人账号
+============================================================================*/
+.page-header {
+    padding: 50px 0 10px;
+    border-bottom: 3px solid #2da8e1;
+    margin: 0 30px;
+}
+.page-title {
+    float: left;
+    color: #2da8e1;
+    font-family: "微软雅黑";
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    line-height: 1.2;
+    font-size: 30px;
+}
+.form-person {
+    text-align: left;
+    margin: 0 70px;
+}
+.form-text {
+color: #2da8e1;
+}
+.setting-avatar {
+border: 1px solid #ccc;
+height: 120px;
+overflow: hidden;
+padding: 1px;
+width: 120px;
+position: relative;
+margin: 20px 20px 20px 0;
+}
+.setting-avatar img {
+  vertical-align: top;
+  width:100%;
+  height:100%;
+}
+input.btnUploadPhoto[type="button"] {
+    background-color: #e26e48;
+    border-color: #e26e48;
+    bottom: 0;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+    left: 0;
+    padding: 2px 0;
+    position: absolute;
+    text-align: center;
+    width: 118px;
+    z-index: 90;
+}
+.setting-avatar a.files {
+    border: 1px hidden #70b1cf;
+    display: block;
+    height: 120px;
+    margin: -120px auto 0;
+    overflow: hidden;
+    text-decoration: none;
+    width: 120px;
+    position: relative;
+    z-index: 100;
+}
+.setting-avatar a.files input {
+    cursor: pointer;
+    font-size: 130px;
+    padding:0;
+    width:100%;
+    height:100%;
+    opacity: 0;
+}
+select {
+    border: 1px solid #ccc;
+    background-color: #fff;
+    padding: 2px 5px;
+    width: 32%;
+}
+
+.content-tiptop {
+    color: #999;
+    line-height: 1;
+    margin-bottom: 20px;
+}
+.input-long {
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+    background-color: #fff;
+    font-size: 14px;
+    /*width: 665px;*/
+    width: 500px;
+    cursor: text;
+}
+.textarea-memo {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    height: 90px;
+    padding: 5px;
+    resize: none;
+    vertical-align: top;
+    width: 100%;
+}
+.btn-login {
+    background-color: #eee;
+    color: #2da8e1;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 12px 0;
+    text-align: center;
+    width: 150px;
+}
+.btn-login:hover {
+    color: #2da8e1;
+}
+.btn-opts {
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    color: #282828;
+    font-size: 12px;
+    font-weight: normal;
+    padding: 5px 10px 4px;
+}
+.account-form {
+    padding: 30px;
+}
+.account-form table tr td {
+    line-height: 3;
+}
+.text-note{color:#b41717;margin-left:3px;}
+
+.content-submit {
+	margin-top: 30px;
+    text-align:center;
+}

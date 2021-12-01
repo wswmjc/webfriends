@@ -1,0 +1,77 @@
+<div class="contacts-main">
+	<!-- 标题区 -->
+	<section class="contacts-topline clear-fix">
+		<div class="back-home">
+			<a id="aGoBack" href="javascript:void(0);">
+				<span class="icon-optSet icon-img icon-back"></span>
+			</a>
+		</div>
+		<div class="top-options">
+			<span id="spnAddFriends" class="icon-optSet icon-img icon-plus" title="添加朋友"></span>
+            <span id="spnMyFriendslistToBlacklist" class="icon-optSet icon-img icon-user-list" title="切换至黑名单？"></span>
+            <span id="spnShowBlacklistToMyFriendslist" class="icon-optSet icon-img icon-no-user" title="切换至通讯录？"></span>
+		</div>
+		<div id="divAddressBook" class="topline-name">通讯录</div>
+	</section>
+
+	<!-- 搜索 -->
+	<section class="contacts-search">
+		<input id="txtKeyword" type="text" class="search" placeholder="查找联系人...">
+        <span id="spnSearch" class="icon-optSet icon-img icon-search-small"></span>
+	</section>
+
+	<!-- 内容列表 -->
+	<section class="contacts-list">
+        <div id="divEmptyBlacklist" class="friend-list-empty"><span>暂没有黑名单列表哦~</span></div>
+		<ul id="ulAddressBookList"></ul>
+        <div class="pagination" style="text-align: center; margin-bottom: 15px;">
+            <div id="divAddressBookPage"></div>
+        </div>
+	</section>
+</div>
+
+
+<!-- 普通对话框 -->
+<section id="sctSearchUser" class="dialog-contacts">
+	<div class="add-search">
+		<input id="txtSearchUserKeyword" type="text" class="search" placeholder="查找用户...">
+		<span id="spnSearchUser">搜索</span>
+	</div>
+	<div >
+		<!-- 内容列表 -->
+		<section class="contacts-list">
+            <div id="divEmptyFriendsFind" class="friend-list-empty"><span>没有找到相关联系人~</span></div>
+			<ul id="ulFriendsFindList" class="clear-fix"></ul>
+            <div class="pagination" style="text-align: center; margin-bottom: 15px;">
+                <div id="divFindFriendsPage"></div>
+            </div>
+            
+		</section>
+	</div>
+</section>
+
+
+<!-- 添加备注 -->
+<section id="dialogAddresserRemark" class="dialog-memo">
+	<div>
+		<span>联系人</span>
+		<span id="spnAddresser" class="user-name"></span>
+	</div>
+	<div>
+		<span>备　注</span>
+		<input id="txtAddresserRemark" type="text" class="search">
+	</div>
+</section>
+
+
+<!-- 添加好友附加消息 -->
+<section id="sctAddFriend" class="dialog-notice">
+	<div>
+		<span>添加好友</span>
+		<span id="spnUserName" class="user-name"></span>
+	</div>
+	<div>
+		<span>附加消息</span>
+		<input id="txtRemark" type="text" class="search">
+	</div>
+</section>
